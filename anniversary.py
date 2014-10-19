@@ -125,7 +125,12 @@ if __name__ == "__main__":
 
     import locale
     locale.setlocale(locale.LC_ALL, '')
-    cash = locale.currency(60 * elapsed_weeks, 1, 0, 1)
+
+    price_per_pack = 6.00   # GBP/pack of 20  # 2010-02-16
+    price_per_pack = 8.80   # GBP/pack of 20  # 2014-10-18
+    packs_per_week = 9
+    money_saved_per_week = price_per_pack * packs_per_week
+    cash = locale.currency(money_saved_per_week * elapsed_weeks, 1, 1, 1)
     print "you have saved", cash
 
 
