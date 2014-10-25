@@ -104,8 +104,6 @@ doctest.testmod()   # automatically validate the embedded tests
 
 
 if __name__ == "__main__":
-    import sys
-    # e.g. use sys.argv[1]
 
     time_to_celebrate = datetime.combine(date(2009, 11, 03), time(8, 30))
     now = datetime.today()
