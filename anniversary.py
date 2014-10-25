@@ -1,6 +1,6 @@
 # Celebrate a passed date.
 
-from datetime import datetime, date, time
+from datetime import datetime, date
 
 from math import floor, log10, pow
 
@@ -149,12 +149,4 @@ def celebrate(date):
 import doctest
 doctest.testmod()   # automatically validate the embedded tests
 
-
-if __name__ == "__main__":
-
-    time_to_celebrate = datetime.combine(date(2009, 11, 03), time(8, 30))
-    celebrate(time_to_celebrate)
-
-#    print is_celebratable_number.__doc__
-#    print is_month_diff.__doc__
 
