@@ -98,7 +98,8 @@ def is_month_diff(date1, date2):
     else:
         return 0
 
-
+# TODO: add a default celebrate_on_datetime
+# TODO: extract cigarette stuff into cigs.py
 def celebrate(date):
     time_to_celebrate = date
     now = datetime.today()
