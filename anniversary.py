@@ -99,13 +99,8 @@ def is_month_diff(date1, date2):
         return 0
 
 
-import doctest
-doctest.testmod()   # automatically validate the embedded tests
-
-
-if __name__ == "__main__":
-
-    time_to_celebrate = datetime.combine(date(2009, 11, 03), time(8, 30))
+def celebrate(date):
+    time_to_celebrate = date
     now = datetime.today()
 
     print "let's celebrate", time_to_celebrate, "on" , now.date(), "at", now.time()
@@ -150,5 +145,16 @@ if __name__ == "__main__":
 
 
 
+
+import doctest
+doctest.testmod()   # automatically validate the embedded tests
+
+
+if __name__ == "__main__":
+
+    time_to_celebrate = datetime.combine(date(2009, 11, 03), time(8, 30))
+    celebrate(time_to_celebrate)
+
 #    print is_celebratable_number.__doc__
 #    print is_month_diff.__doc__
+
