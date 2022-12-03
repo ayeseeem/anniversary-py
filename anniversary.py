@@ -136,7 +136,7 @@ def celebrate(date):
     if ((elapsed_days % 7) == 0):
         print "it's been", elapsed_weeks, "weeks"
 
-    is_month_anniversary = is_month_diff(now.date(), time_to_celebrate.date())
+    is_month_anniversary = is_month_diff(time_to_celebrate.date(), now.date())
     if is_month_anniversary:
         if (is_month_anniversary <= 6) or (is_month_anniversary % 3 == 0):
             # TODO: at some point, stop celebrating every month
