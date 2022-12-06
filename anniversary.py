@@ -6,7 +6,7 @@ from math import floor, log10, pow
 
 def is_celebratable_number(n):
     """Celebrates multiples of powers of tens.
-    
+
     e.g. if >= 10, < 100 days, celebrate 10, 20, 30
     if < 10 days, celebrate each day
     if >= 100, < 1000, celebrate 100, 200, 300
@@ -31,7 +31,7 @@ def is_celebratable_number(n):
     700
     >>> is_celebratable_number(701)
     0
-    
+
     """
 
     actual_log = log10(n)
@@ -83,12 +83,12 @@ def is_month_diff(date1, date2):
     Duplicate dates is no diffence in months:
     >>> is_month_diff(date(2009, 03, 13), date(2009, 03, 13))
     0
-    
+
     One month works:
     >>> is_month_diff(date(2009, 03, 13), date(2009, 04, 13))
     1
-    
-    
+
+
     """
     if (date1.day == date2.day):
         date1_months = date1.year * 12 + date1.month
@@ -97,6 +97,7 @@ def is_month_diff(date1, date2):
         return diff
     else:
         return 0
+
 
 # TODO: add a default celebrate_on_datetime
 # TODO: extract cigarette stuff into cigs.py
@@ -127,7 +128,6 @@ def celebrate(date):
     cash = locale.currency(money_saved_per_week * elapsed_weeks, 1, 1, 1)
     print "you have saved", cash
 
-
     print "Celebrations:"
 
     if (is_celebratable_number(elapsed_days)):
@@ -144,10 +144,5 @@ def celebrate(date):
             # TODO: when m > 12, start saying "N Years {M months}"
             print "It's been", is_month_anniversary, "months"
 
-
-
-
 import doctest
 doctest.testmod()   # automatically validate the embedded tests
-
-
