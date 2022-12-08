@@ -57,35 +57,35 @@ def is_month_diff(date1, date2):
     Returns the number of months the difference is, or 0 when not whole
     number of months.
 
-    >>> is_month_diff(date(2009, 01, 13), date(2009, 03, 12))
+    >>> is_month_diff(date(2009, 1, 13), date(2009, 3, 12))
     0
-    >>> is_month_diff(date(2009, 01, 13), date(2009, 03, 13))
+    >>> is_month_diff(date(2009, 1, 13), date(2009, 3, 13))
     2
-    >>> is_month_diff(date(2009, 01, 13), date(2009, 03, 14))
+    >>> is_month_diff(date(2009, 1, 13), date(2009, 3, 14))
     0
 
     This can go wrong when the day is > 28. If it's Jan 30, then there's no
     day in Feb when it's a whole number of months later. But on Mar 30, it
     IS 2 whole months. So for days > 28, this only applies sometimes.
-    >>> is_month_diff(date(2009, 01, 30), date(2009, 02, 28))
+    >>> is_month_diff(date(2009, 1, 30), date(2009, 2, 28))
     0
-    >>> is_month_diff(date(2009, 01, 30), date(2009, 03, 30))
+    >>> is_month_diff(date(2009, 1, 30), date(2009, 3, 30))
     2
 
     Doesn't matter which date is earlier:
-    >>> is_month_diff(date(2009, 03, 13), date(2009, 01, 12))
+    >>> is_month_diff(date(2009, 3, 13), date(2009, 1, 12))
     0
-    >>> is_month_diff(date(2009, 03, 13), date(2009, 01, 13))
+    >>> is_month_diff(date(2009, 3, 13), date(2009, 1, 13))
     -2
-    >>> is_month_diff(date(2009, 03, 13), date(2009, 01, 14))
+    >>> is_month_diff(date(2009, 3, 13), date(2009, 1, 14))
     0
 
     Duplicate dates is no diffence in months:
-    >>> is_month_diff(date(2009, 03, 13), date(2009, 03, 13))
+    >>> is_month_diff(date(2009, 3, 13), date(2009, 3, 13))
     0
 
     One month works:
-    >>> is_month_diff(date(2009, 03, 13), date(2009, 04, 13))
+    >>> is_month_diff(date(2009, 3, 13), date(2009, 4, 13))
     1
 
 
@@ -105,18 +105,18 @@ def celebrate(date):
     time_to_celebrate = date
     now = datetime.today()
 
-    print "let's celebrate", time_to_celebrate, "on" , now.date(), "at", now.time()
+    print("let's celebrate", time_to_celebrate, "on" , now.date(), "at", now.time())
 
     elapsed = now - time_to_celebrate
 
-    print "Summary:"
-    print "it's been", elapsed
+    print("Summary:")
+    print("it's been", elapsed)
 
     elapsed_days = elapsed.days
-    print "it's been", elapsed_days, "days"
+    print("it's been", elapsed_days, "days")
 
     elapsed_weeks = elapsed_days / 7
-    print "it's been", elapsed_weeks, "weeks,", elapsed_days % 7, "days"
+    print("it's been", elapsed_weeks, "weeks,", elapsed_days % 7, "days")
 
     import locale
     locale.setlocale(locale.LC_ALL, '')
@@ -126,15 +126,15 @@ def celebrate(date):
     packs_per_week = 9
     money_saved_per_week = price_per_pack * packs_per_week
     cash = locale.currency(money_saved_per_week * elapsed_weeks, 1, 1, 1)
-    print "you have saved", cash
+    print("you have saved", cash)
 
-    print "Celebrations:"
+    print("Celebrations:")
 
     if (is_celebratable_number(elapsed_days)):
-        print "it's been", elapsed_days, "days"
+        print("it's been", elapsed_days, "days")
 
     if ((elapsed_days % 7) == 0):
-        print "it's been", elapsed_weeks, "weeks"
+        print("it's been", elapsed_weeks, "weeks")
 
     is_month_anniversary = is_month_diff(time_to_celebrate.date(), now.date())
     if is_month_anniversary:
@@ -142,7 +142,7 @@ def celebrate(date):
             # TODO: at some point, stop celebrating every month
             # and start going up in, say, 3s.
             # TODO: when m > 12, start saying "N Years {M months}"
-            print "It's been", is_month_anniversary, "months"
+            print("It's been", is_month_anniversary, "months")
 
 import doctest
 doctest.testmod()   # automatically validate the embedded tests
