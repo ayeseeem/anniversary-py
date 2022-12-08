@@ -116,7 +116,7 @@ def celebrate(date):
     print("it's been", elapsed_days, "days")
 
     elapsed_weeks = elapsed_days / 7
-    print("it's been", elapsed_weeks, "weeks,", elapsed_days % 7, "days")
+    print("it's been", floor(elapsed_weeks), "weeks,", elapsed_days % 7, "days")
 
     import locale
     locale.setlocale(locale.LC_ALL, '')
