@@ -80,7 +80,7 @@ def is_month_diff(date1, date2):
     >>> is_month_diff(date(2009, 3, 13), date(2009, 1, 14))
     0
 
-    Duplicate dates is no diffence in months:
+    Duplicate dates is no difference in months:
     >>> is_month_diff(date(2009, 3, 13), date(2009, 3, 13))
     0
 
