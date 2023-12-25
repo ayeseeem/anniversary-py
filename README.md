@@ -1,6 +1,14 @@
 `anniversary-js`
 ================
 
+![Project Status](https://img.shields.io/badge/status-umaintained-critical)
+
+[![Replacement](https://img.shields.io/static/v1?label=replacement&message=anniversary-js&color=green)](https://github.com/ayeseeem/anniversary-js)
+
+This code is **UNMAINTAINED**.
+It is no longer under active development.
+It has been superseded by the [JavaScript version](https://github.com/ayeseeem/anniversary-js).
+
 
 Intro
 -----
