@@ -1,4 +1,4 @@
-`anniversary-js`
+`anniversary-py`
 ================
 
 ![Project Status](https://img.shields.io/badge/status-umaintained-critical)
