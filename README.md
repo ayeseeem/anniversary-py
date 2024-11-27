@@ -25,8 +25,8 @@ it to a [JavaScript version](https://github.com/ayeseeem/anniversary-js), and th
 <https://anniversary.firebaseapp.com/index.html>.
 
 It used to try to track how much I'd saved, and I tried to make it let me
-"celebrate" something most days: "it's been 10 days", "it's been two weeks",
-"it's been a month", and so on, so there was always a little milestone or
+"celebrate" something most days: "It's been 10 days", "It's been two weeks",
+"It's been a month", and so on, so there was always a little milestone or
 achievement.
 
 The idea was always to improve this, to make it useful for others, either

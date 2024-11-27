@@ -105,18 +105,18 @@ def celebrate(date):
     time_to_celebrate = date
     now = datetime.today()
 
-    print("let's celebrate", time_to_celebrate, "on" , now.date(), "at", now.time())
+    print("Let's celebrate", time_to_celebrate, "on" , now.date(), "at", now.time())
 
     elapsed = now - time_to_celebrate
 
     print("Summary:")
-    print("it's been", elapsed)
+    print("It's been", elapsed)
 
     elapsed_days = elapsed.days
-    print("it's been", elapsed_days, "days")
+    print("It's been", elapsed_days, "days")
 
     elapsed_weeks = elapsed_days / 7
-    print("it's been", floor(elapsed_weeks), "weeks,", elapsed_days % 7, "days")
+    print("It's been", floor(elapsed_weeks), "weeks,", elapsed_days % 7, "days")
 
     import locale
     locale.setlocale(locale.LC_ALL, '')
@@ -126,15 +126,15 @@ def celebrate(date):
     packs_per_week = 9
     money_saved_per_week = price_per_pack * packs_per_week
     cash = locale.currency(money_saved_per_week * elapsed_weeks, 1, 1, 1)
-    print("you have saved", cash)
+    print("You have saved", cash)
 
     print("Celebrations:")
 
     if (is_celebratable_number(elapsed_days)):
-        print("it's been", elapsed_days, "days")
+        print("It's been", elapsed_days, "days")
 
     if ((elapsed_days % 7) == 0):
-        print("it's been", elapsed_weeks, "weeks")
+        print("It's been", elapsed_weeks, "weeks")
 
     is_month_anniversary = is_month_diff(time_to_celebrate.date(), now.date())
     if is_month_anniversary:
